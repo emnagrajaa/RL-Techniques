@@ -1,4 +1,4 @@
-#Some SARSA and Q-learning implementations
+#Some SARSA implementations
 import gymnasium as gym
 import numpy as np
 
