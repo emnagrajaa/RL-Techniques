@@ -33,7 +33,9 @@ def policy_iteration():
         if improved_policy == policy:
             break
         policy = improved_policy
+    print("policy improved")
     return policy, V
+
 
 def get_max_action_and_value(state,V, env, terminal_state,gamma):
     Q_values=[compute_q_value(state,action,V)for action in range(env.action_space.n)]
