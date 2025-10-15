@@ -7,6 +7,7 @@ def update_q_table(state,action,reward,next_state,next_action):
     old_value=Q[state,action]
     next_value=Q[next_state,next_action]
     Q[state,action]= (1-alpha)*old_value + alpha*(reward + gamma*next_value)
+    print(Q)
 
 def get_policy(env):
     policy={state: np.argmax(Q[state]) for state in range(env.observation_space.n)}
